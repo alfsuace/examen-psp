@@ -24,10 +24,10 @@ class ApiAnimal {
 
     suspend fun getAnimalList(): List<AnimalRemoteModel> {
         val response = apiEndPoint.listAnimal()
-            return response.body()!!
+        return response.body()!!
     }
-    suspend fun getAnimalType(): AnimalTypeRemoteModel{
+    suspend fun getAnimalType(): List<AnimalTypeRemoteModel>{
         val response = apiEndPoint.listAnimalType()
-            return response.body()!!
+        return response.body()!!
     }
 }

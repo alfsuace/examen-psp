@@ -7,7 +7,4 @@ interface ApiServices {
     @GET("adoptions.json")
     fun listAnimal(): Response<List<AnimalRemoteModel>>
 
-    @GET("adoptions.json")
-    fun listAnimalType(): Response<List<AnimalTypeRemoteModel>>
-
 }

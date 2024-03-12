@@ -26,8 +26,4 @@ class ApiAnimal {
         val response = apiEndPoint.listAnimal()
         return response.body()!!
     }
-    suspend fun getAnimalType(): List<AnimalTypeRemoteModel>{
-        val response = apiEndPoint.listAnimalType()
-        return response.body()!!
-    }
 }

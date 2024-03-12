@@ -10,7 +10,7 @@ fun AnimalTypeRemoteModel.toDomain(): AnimalType {
     )
 }
 
-fun AnimalRemoteModel.toDomain(type: AnimalTypeRemoteModel): Animal {
+fun AnimalRemoteModel.toDomain(): Animal {
     return Animal(
         this.id,
         this.name,

@@ -13,6 +13,7 @@ data class AnimalRemoteModel(
     @SerializedName("size") val size: String,
     @SerializedName("url_image") val urlImage: String,
     @SerializedName("url_source") val urlSource: String,
+    @SerializedName("type") val type: AnimalTypeRemoteModel,
     @SerializedName("gallery") val gallery: List<String>
 )
 

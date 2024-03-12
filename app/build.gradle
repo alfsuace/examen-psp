@@ -5,12 +5,12 @@ plugins {
 
 android {
     namespace 'com.iesam.ex_22_23_psp_marzo'
-    compileSdk 33
+    compileSdk 34
 
     defaultConfig {
         applicationId "com.iesam.ex_22_23_psp_marzo"
         minSdk 24
-        targetSdk 33
+        targetSdk 34
         versionCode 1
         versionName "1.0"
 

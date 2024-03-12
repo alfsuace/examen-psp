@@ -1,7 +1,9 @@
 package com.iesam.ex_22_23_psp_marzo.presentation
 
+import android.database.Observable
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.Observer
 import com.iesam.ex_22_23_psp_marzo.R
 import com.iesam.ex_22_23_psp_marzo.data.AdoptionDataRepository
 import com.iesam.ex_22_23_psp_marzo.data.remote.AdoptionRemoteDataSource
@@ -29,7 +31,10 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun setupObservers() {
-        //Ejercicio 1: Corutinas
+        val observer = Observer<MainViewModel.UiState>{
+            it.adoptionList
+        }
+        viewModel.uiState.observe(this, observer)
     }
 
     private fun initAdoptions() {

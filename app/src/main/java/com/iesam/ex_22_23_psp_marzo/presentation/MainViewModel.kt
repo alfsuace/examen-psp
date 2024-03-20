@@ -16,7 +16,8 @@ class MainViewModel(private val getAdoptions: GetAdoptionsUseCase) : ViewModel()
     fun loadAdoptions() {
         _uiState.postValue(UiState(adoptionList = emptyList()))
         viewModelScope.launch(Dispatchers.IO) {
-            getAdoptions.invoke()
+            val response = getAdoptions.invoke()
+            _uiState.postValue(UiState(adoptionList = response))
         }
     }
 

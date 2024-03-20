@@ -5,6 +5,6 @@ import retrofit2.http.GET
 
 interface ApiServices {
     @GET("adoptions.json")
-    fun listAnimal(): Response<List<AnimalRemoteModel>>
+    suspend fun listAnimal(): Response<List<AnimalRemoteModel>>
 
 }

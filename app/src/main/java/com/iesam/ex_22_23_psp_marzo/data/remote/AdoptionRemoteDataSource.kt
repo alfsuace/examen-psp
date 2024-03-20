@@ -8,7 +8,7 @@ class AdoptionRemoteDataSource {
      */
 
     private val apiAnimal = ApiAnimal()
-    suspend fun getAdoptions(): List<Animal> {
+     suspend fun getAdoptions(): List<Animal> {
         return apiAnimal.getAnimalList().map {
             it.toDomain()
         }
